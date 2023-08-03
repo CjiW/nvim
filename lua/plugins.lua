@@ -116,15 +116,6 @@ return require('packer').startup(function(use)
         -- Markdown support
         use { 'preservim/vim-markdown', ft = { 'markdown' } }
 
-        -- Markdown previewer
-        -- It require nodejs and yarn. Use homebrew to install first
-        use {
-            "iamcco/markdown-preview.nvim",
-            run = "cd app && npm install",
-            setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-            ft = { "markdown" },
-        }
-
         -- Smart indentation for Python
         use { "Vimjas/vim-python-pep8-indent", ft = { "python" } }
 
