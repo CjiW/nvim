@@ -1,5 +1,5 @@
 -- load options
-require('options')        
+require('options')
 
 
 -- load keymappings

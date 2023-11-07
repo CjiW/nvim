@@ -104,7 +104,7 @@ return require('packer').startup(function(use)
         }
         -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
         -- Show indentation and blankline
-        use { 'lukas-reineke/indent-blankline.nvim', config = [[require('config.indent-blankline')]] }
+        -- use { 'lukas-reineke/indent-blankline.nvim', config = [[require('config.indent-blankline')]] }
 
         -- Status line
         use {
