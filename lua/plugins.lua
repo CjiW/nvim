@@ -71,15 +71,6 @@ return require('packer').startup(function(use)
         use 'L3MON4D3/LuaSnip'
         use { 'saadparwaiz1/cmp_luasnip', after = { 'nvim-cmp', 'LuaSnip' } }
 
-        -- Colorscheme
-        use 'tanvirtin/monokai.nvim'
-
-        -- Git integration
-        use 'tpope/vim-fugitive'
-
-        -- Git decorations
-        use { 'lewis6991/gitsigns.nvim', config = [[require('config.gitsigns')]] }
-
         -- Autopairs: [], (), "", '', etc
         -- it relies on nvim-cmp
         use {
@@ -96,15 +87,10 @@ return require('packer').startup(function(use)
         -- Treesitter-integration
         use {
             'nvim-treesitter/nvim-treesitter',
-            run = function()
-                local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-                ts_update()
-            end,
             config = [[require('config.nvim-treesitter')]],
         }
-        -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-        -- Show indentation and blankline
-        -- use { 'lukas-reineke/indent-blankline.nvim', config = [[require('config.indent-blankline')]] }
+        -- Dracula theme
+        use 'Mofiqul/dracula.nvim'
 
         -- Status line
         use {
@@ -113,12 +99,6 @@ return require('packer').startup(function(use)
             config = [[require('config.lualine')]],
         }
 
-        -- Markdown support
-        use { 'preservim/vim-markdown', ft = { 'markdown' } }
-
-        -- Smart indentation for Python
-        use { "Vimjas/vim-python-pep8-indent", ft = { "python" } }
-
         -- File explorer
         use {
             'nvim-tree/nvim-tree.lua',
@@ -126,16 +106,6 @@ return require('packer').startup(function(use)
                 'nvim-tree/nvim-web-devicons', -- optional, for file icons
             },
             config = [[require('config.nvim-tree')]]
-        }
-
-        -- Smart motion
-        use {
-            'phaazon/hop.nvim',
-            branch = 'v2', -- optional but strongly recommended
-            config = function()
-                -- you can configure Hop the way you like here; see :h hop-config
-                require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-            end
         }
 
         -- Better terminal integration

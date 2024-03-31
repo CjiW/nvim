@@ -10,10 +10,6 @@ require('keymaps')
 require('plugins')
 
 
--- Set colorscheme
-require('colorscheme')
-
-
 -- Set LSP
 require('lsp')
 
