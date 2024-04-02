@@ -19,12 +19,7 @@ vim.opt.termguicolors = true -- enabl 24-bit RGB color in the TUI
 vim.opt.showmode = false -- we are experienced, wo don't need the "-- INSERT --" mode hint
 local dracula = require("dracula")
 dracula.setup({
-    colors = {
-        bg = "#282828",
-    },
-    NvimTreeNormal = {
-        guibg = "#282828",
-    },
+    transparent_bg = true    
 })
 vim.cmd[[colorscheme dracula]]
 
