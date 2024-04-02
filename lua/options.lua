@@ -34,5 +34,5 @@ vim.opt.smartcase = true -- but make it case sensitive if an uppercase is entere
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- restore cursor shape when exit
+-- restore cursor when leaving nvim
 vim.cmd[[au VimLeave * set guicursor=a:ver25-Cursor/lCursor]]
