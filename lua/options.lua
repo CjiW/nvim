@@ -33,3 +33,6 @@ vim.opt.smartcase = true -- but make it case sensitive if an uppercase is entere
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- restore cursor shape when exit
+vim.cmd[[au VimLeave * set guicursor=a:ver25-Cursor/lCursor]]
